@@ -20,7 +20,7 @@ type Room = {
   totalCoin: number;
 };
 
-const API_BASE = process.env.EXPO_PUBLIC_API ?? "http://localhost:3000";
+const API_BASE = process.env.EXPO_PUBLIC_API ?? "https://bedbet.knpu.re.kr/api";
 
 // 00:00 ~ 23:30 30분 단위
 const HALF_HOUR_SLOTS = Array.from({ length: 48 }, (_, i) => {

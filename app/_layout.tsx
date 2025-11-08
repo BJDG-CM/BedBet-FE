@@ -1,10 +1,17 @@
 import { Stack } from "expo-router";
 import React, { createContext, useContext, useState } from "react";
 
-type AuthContextType = {
+export type AuthContextType = {
   loggedIn: boolean;
   login: () => void;
   logout: () => void;
+  user?: {
+    name: string;
+    email: string;
+    bank: string;
+    account_number: string;
+    coin: Int32Array;
+  };
 };
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -22,7 +29,10 @@ export default function RootLayout() {
         logout: () => setLoggedIn(false),
       }}
     >
-      <Stack screenOptions={{ headerShown: false }} initialRouteName={initialRoute}>
+      <Stack
+        screenOptions={{ headerShown: false }}
+        initialRouteName={initialRoute}
+      >
         <Stack.Screen name="(auth)/firstpage" />
         <Stack.Screen name="(auth)/login" />
         <Stack.Screen name="(auth)/signup" />
