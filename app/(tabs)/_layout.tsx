@@ -48,9 +48,9 @@ export default function TabsLayout() {
         },
       })}
     >
-      <Tabs.Screen name="index" options={{ title: "홈" }} />
-      <Tabs.Screen name="cash" options={{ title: "캐쉬" }} />
-      <Tabs.Screen name="profile" options={{ title: "프로필" }} />
+      <Tabs.Screen name="index" options={{ title: "홈", headerShown: false, }} />
+      <Tabs.Screen name="cash" options={{ title: "캐쉬", headerShown: false, }} />
+      <Tabs.Screen name="profile" options={{ title: "프로필", headerShown: false, }} />
     </Tabs>
   );
 }
